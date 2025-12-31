@@ -1,0 +1,244 @@
+/* navbar------------------------------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar
+{
+    background-color:#004274;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.menu-sec
+{
+    width: 20%;
+    padding-left: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+    font-weight:500;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.links
+{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.tollfree
+{
+    display: flex;
+    justify-content: space-around;
+}
+.social
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.social div{
+    padding: 10px;
+}
+.lang
+{
+    background-color: #c2048a;
+    border-radius: 5px;
+    padding: 8px;
+}
+.lang:hover
+{
+    border: 2px solid white;
+}
+.line
+{
+    height: 35px;
+    border-right: 1px solid white;
+}
+.navbar2
+{
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 45px;
+    border-bottom: 2px solid #c2048a;
+}
+.search
+{
+    padding: 8px;
+    background-color: #c2048a;
+    border-radius: 5px;
+}
+.search:hover
+{
+    border: 2px solid white;
+}
+i{
+    font-size: 20px;
+}
+i:hover
+{
+    transform: scale(1.2);
+}
+  
+
+.login-box {
+  /* padding: 20px; */
+  /* background-color: #007bff; Blue box */
+  height: 470px;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.option-button {
+  padding: 30px;
+  background-color:#007bff; /* Blue */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 30px;
+
+}
+
+.option-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #ff9933; /* Orange */
+    background-position: 0% 50%;
+  }
+  25% {
+    background-color: #ffffff; /* White */
+    background-position: 25% 50%;
+  }
+  50% {
+    background-color: #138808; /* Green */
+    background-position: 50% 50%;
+  }
+  75% {
+    background-color: #ffffff; /* White */
+    background-position: 75% 50%;
+  }
+  100% {
+    background-color: #ff9933; /* Orange */
+    background-position: 100% 50%;
+  }
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, #ff9933, #ffffff, #138808, #ffffff, #ff9933);
+  background-size: 500% auto;
+  animation: backgroundAnimation 20s infinite linear;
+}
+.footer {
+    
+    background-color:#004274;
+    color:#ace8fe;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    padding: 40px; 
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+}
+.footer-section1
+{
+    background-color: rgba(0, 0, 38,0.2);
+    padding: 16px 8px ;
+    border-radius: 10px;
+}
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer h3 {
+    color: white;
+    border-bottom: 2px solid #2da4f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.eci-txt
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer p, .footer ul {
+    margin: 0 0 10px 0; 
+}
+.footer ul li {
+    margin: 5px 0;
+}
+.footer ul li a {
+    color:#ace8fe;
+    text-decoration: none;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.cont2
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.footer-logo {
+    margin: 10px 0;
+    padding-right: 30px;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 15px 40px;
+    border-top: 1px solid #2da4f0;
+}
+.election-image {
+    max-width: 100%;
+    height: auto;
+    padding-left: 40px;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 38,0.2);
+}
+.vep
+{
+    font-family: sans-serif;
+    font-size:40px;
+    color: #004274;
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px;
+}
