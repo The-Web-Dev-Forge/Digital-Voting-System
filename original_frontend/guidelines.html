@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ace8fe;
+        }
+
+        .container{
+            position: relative;
+            width:100%;
+            height: 100vh;
+            background: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+            overflow: hidden;
+        }
+
+        .container h1{
+            font-size: 36px;
+            margin: -10px 0;
+        }
+
+        .container p{
+            font-size: 14.5px;
+            margin: 15px 0;
+        }
+
+        .form-box{
+            position: absolute;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: #fff;
+            color: #333;
+            padding: 40px;
+            z-index: 1;
+            transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+            overflow-y: auto;
+        }
+
+        .container.active .form-box{ right: 50%; }
+
+        .form-box.register{ visibility: hidden; }
+        .container.active .form-box.register{ visibility: visible; }
+
+        .btn {
+            width: 100%;
+            height: 48px;
+            background: #7494ec;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #fff;
+            color: #0000ff;
+        }
+
+        .toggle-box{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .toggle-box::before{
+            content: '';
+            position: absolute;
+            left: -250%;
+            width: 300%;
+            height: 100%;
+            background: #06038D;
+            border-radius: 150px;
+            z-index: 2;
+            transition: 1.8s ease-in-out;
+        }
+
+        .container.active .toggle-box::before{ left: 50%; }
+
+        .toggle-panel{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: seagreen;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            transition: .6s ease-in-out;
+        }
+
+        .toggle-panel.toggle-left{ 
+            left: 0;
+            transition-delay: 1.2s; 
+            background: #ff671f;
+        }
+        .container.active .toggle-panel.toggle-left{
+            left: -50%;
+            transition-delay: .6s;
+        }
+
+        .toggle-panel.toggle-right{ 
+            right: -50%;
+            transition-delay: .6s;
+        }
+        .container.active .toggle-panel.toggle-right{
+            right: 0;
+            transition-delay: 1.2s;
+        }
+
+        .toggle-panel p{ margin-bottom: 20px; }
+
+        .toggle-panel .btn{
+            width: 160px;
+            height: 46px;
+            background: transparent;
+            border: 2px solid #fff;
+            box-shadow: none;
+        }
+
+        .proceed-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #06038D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .proceed-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content Styling */
+        .content-container {
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .content-container h1 {
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .content-container h2 {
+            color: #004d99;
+            margin: 20px 0 10px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .content-container p {
+            margin-bottom: 15px;
+        }
+
+        .content-container ul, .content-container ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content-container li {
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .note {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #ff6600;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 850px){
+            .container{ height: calc(100vh - 40px); }
+
+            .form-box{
+                bottom: 0;
+                width: 100%;
+                height: 70%;
+            }
+
+            .container.active .form-box{
+                right: 0;
+                bottom: 30%;
+            }
+
+            .toggle-box::before{
+                left: 0;
+                top: -270%;
+                width: 100%;
+                height: 300%;
+                border-radius: 20vw;
+            }
+
+            .container.active .toggle-box::before{
+                left: 0;
+                top: 70%;
+            }
+
+            .container.active .toggle-panel.toggle-left{
+                left: 0;
+                top: -30%;
+            }
+
+            .toggle-panel{ 
+                width: 100%;
+                height: 30%;
+            }
+            .toggle-panel.toggle-left{ top: 0; }
+            .toggle-panel.toggle-right{
+                right: 0;
+                bottom: -30%;
+            }
+
+            .container.active .toggle-panel.toggle-right{ bottom: 0; }
+        }
+
+        @media screen and (max-width: 400px){
+            .form-box { padding: 20px; }
+            .toggle-panel h1{font-size: 30px; }
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <div class="content-container">
+                <h1>NRI Voting Guide for Indian Elections</h1>
+                
+                <h2>Eligibility</h2>
+                <p>To vote as an NRI in Indian elections, you must meet the following criteria:</p>
+                <ul>
+                    <li>Be an Indian citizen residing abroad for employment, education, or other reasons</li>
+                    <li>Not have acquired citizenship of another country</li>
+                    <li>Be at least 18 years old as of January 1 of the year of electoral roll revision</li>
+                </ul>
+                
+                <h2>Registration Process</h2>
+                <p>Follow these steps to register as an overseas elector:</p>
+                <ol>
+                    <li><strong>Form Submission:</strong>
+                        <ul>
+                            <li>Complete <strong>Form 6A</strong> online via the <a href="https://www.nvsp.in" target="_blank">National Voters' Services Portal</a></li>
+                            <li>Alternatively, submit the form in person to the Electoral Registration Officer (ERO) of your constituency</li>
+                        </ul>
+                    </li>
+                    <li><strong>Required Documents:</strong>
+                        <ul>
+                            <li>A recent passport-sized photograph</li>
+                            <li>Self-attested copies of relevant passport pages, including those with your photograph, Indian address, and visa endorsement</li>
+                        </ul>
+                    </li>
+                    <li><strong>Verification:</strong>
+                        <ul>
+                            <li>A Booth Level Officer (BLO) will verify your application, possibly visiting your Indian address</li>
+                            <li>If no relatives are available for verification, the documents may be sent to the concerned Indian Mission</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h2>Voting Process</h2>
+                <p>Currently, NRIs must be physically present at their designated polling stations in India to vote. Postal or proxy voting is not yet available for NRIs.</p>
+                
+                <h2>Important Considerations</h2>
+                <ul>
+                    <li><strong>No Dual Registration:</strong> Ensure you're not registered as a general elector in India. If you are, surrender your Electoral Photo Identity Card (EPIC) when applying as an overseas elector</li>
+                    <li><strong>Re-registration upon Return:</strong> If you return to India and resume ordinary residence, register as a general voter at your place of residence and request the deletion of your overseas elector registration</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-box register">
+            <div class="content-container">
+                <h1>Digital Voting Guidelines for Indian Citizens</h1>
+                
+                <h2>Step 1: Identifying Your Nationality</h2>
+                <ul>
+                    <li>Upon visiting the portal, identify yourself as an <strong>Indian Citizen</strong></li>
+                    <li>Indian citizens proceed with the digital voting process</li>
+                </ul>
+                
+                <h2>Step 2: Login Options</h2>
+                <ul>
+                    <li>Log in using either <strong>DigiLocker</strong> or your <strong>Voter ID Card</strong></li>
+                    <li><strong>DigiLocker Login:</strong> Use your mobile number, username, or Aadhaar card with a 6-digit PIN</li>
+                    <li><strong>Voter ID Login:</strong> Enter your EPIC number and phone number for OTP-based authentication</li>
+                    <li><strong>Important:</strong> You can only log in during your assigned time slots</li>
+                </ul>
+                
+                <h2>Step 3: Verification of Voter Details</h2>
+                <ul>
+                    <li>After logging in, verify your voter details including name, voter ID number, DOB, father's name, gender, constituency, and address</li>
+                    <li>Confirm these details before proceeding</li>
+                </ul>
+                
+                <h2>Step 4: Face Detection Authentication</h2>
+                <ul>
+                    <li>Capture an image of your face for security verification</li>
+                    <li>The system verifies if the image is of a real person and not a photograph</li>
+                </ul>
+                
+                <h2>Step 5: Casting Your Vote</h2>
+                <ul>
+                    <li>View the list of candidates from your constituency, including their name, party name, party symbol, and photo</li>
+                    <li>Select your candidate of choice</li>
+                    <li>Confirm your selection before final submission</li>
+                    <li>Your vote is securely stored for election result processing</li>
+                </ul>
+                
+                <div class="note">
+                    <p><strong>Note:</strong> The web application maintains the theme and structure of the Election Commission of India's official website to ensure authenticity. For more information, visit the official <a href="https://www.eci.gov.in" target="_blank">Election Commission of India</a> website.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Indian Voter?</h1>
+                <p>Click below to see guidelines for Indian voters.</p>
+                <button class="btn register-btn">Indian Guidelines</button>
+            </div>
+
+            <div class="toggle-panel toggle-right">
+                <h1>NRI Voter?</h1>
+                <p>Click below to see guidelines for NRI voters.</p>
+                <button class="btn login-btn">NRI Guidelines</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Static Proceed Button -->
+    <button class="proceed-btn" onclick="window.location.href = 'nationality'">Proceed further -></button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            const registerBtn = document.querySelector('.register-btn');
+            const loginBtn = document.querySelector('.login-btn');
+
+            registerBtn.addEventListener('click', () => {
+                container.classList.add('active');
+            });
+
+            loginBtn.addEventListener('click', () => {
+                container.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
