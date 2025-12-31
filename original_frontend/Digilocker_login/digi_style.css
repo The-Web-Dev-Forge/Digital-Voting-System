@@ -1,0 +1,361 @@
+/* navbar------------------------------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar
+{
+    background-color:#004274;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.menu-sec
+{
+    width: 20%;
+    padding-left: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+    font-weight:500;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.links
+{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.tollfree
+{
+    display: flex;
+    justify-content: space-around;
+}
+.social
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.social div{
+    padding: 10px;
+}
+.lang
+{
+    background-color: #c2048a;
+    border-radius: 5px;
+    padding: 8px;
+}
+.lang:hover
+{
+    border: 2px solid white;
+}
+.line
+{
+    height: 35px;
+    border-right: 1px solid white;
+}
+.navbar2
+{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 45px;
+    border-bottom: 2px solid #c2048a;
+}
+.search
+{
+    padding: 8px;
+    background-color: #c2048a;
+    border-radius: 5px;
+}
+.search:hover
+{
+    border: 2px solid white;
+}
+i{
+    font-size: 20px;
+}
+i:hover
+{
+    transform: scale(1.2);
+}
+
+/* page1--------------------------------------------------------------------------------- */
+.page1{
+    font-family: Arial, sans-serif;
+    background-color: #ace8fe;
+    margin-top: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.container1 {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: -120px;
+    border-bottom:#004274;
+    border-bottom-width: thick;
+    position: absolute;
+    margin-top: 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+header .emblem {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #4a4a4a;
+}
+
+header .title p {
+    margin: 0;
+    font-size: 12px;
+    color: #7a7a7a;
+}
+
+main {
+    padding: 20px;
+}
+
+.signin-box {
+    text-align: center;
+}
+
+.signin-box h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    color: blue;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    flex: 1;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover{
+    background-color: white;
+    color: blue;
+}
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.signin-form {
+    display: none;
+    position: relative;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="password"] {
+    width: 100%;
+    padding: 7px;
+    margin: 10px 0;
+    margin-right: -8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    float: right;
+}
+
+.register{
+    display: block;
+    padding: 2px;
+    margin: 10px 0px;
+    margin-top: -9px;
+    margin-bottom: -1px;
+    margin-left: -9px;
+    color: #007bff;
+    font-size: 12px;
+    font-weight:550;
+    text-decoration: none;
+    float: left;
+}
+
+.forgot-pin {
+    display: block;
+    padding: 2px;
+    margin: 10px -10px;
+    margin-top: -1px;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    float: left;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup {
+    margin: 20px 0 0;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+
+.signup a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+
+
+/* footer---------------------------------------------------------------------------- */
+.footer {
+    
+    background-color:#004274;
+    color:#ace8fe;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.container2 {
+    display: flex;
+    padding: 40px; 
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+}
+.footer-section1
+{
+    background-color: rgba(0, 0, 38,0.2);
+    padding: 16px 8px ;
+    border-radius: 10px;
+}
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer h3 {
+    color: white;
+    border-bottom: 2px solid #2da4f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.eci-txt
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer p, .footer ul {
+    margin: 0 0 10px 0; 
+}
+.footer ul li {
+    margin: 5px 0;
+}
+.footer ul li a {
+    color:#ace8fe;
+    text-decoration: none;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.cont2
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.footer-logo {
+    margin: 10px 0;
+    padding-right: 30px;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 15px 40px;
+    border-top: 1px solid #2da4f0;
+}
+.election-image {
+    max-width: 100%;
+    height: auto;
+    padding-left: 40px;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 38,0.2);
+}
+
+
+.digi-span {
+    position: relative;
+    width: 400px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .digi-span span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 190px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: blink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+  }
+  
+  @keyframes blink {
+    0% {
+      background: #0ef;
+    }
+  
+    25% {
+      background: #2c4766;
+    }
+  }
