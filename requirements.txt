@@ -1,0 +1,7 @@
+Django==4.2.23
+psycopg2-binary==2.9.10
+Pillow==11.3.0
+
+# Federated Learning Dependencies
+cryptography==41.0.7  # For biometric encryption
+numpy==1.24.3  # For numerical operations on embeddings
