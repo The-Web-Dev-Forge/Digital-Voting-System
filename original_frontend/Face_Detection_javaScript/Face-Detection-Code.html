@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Face Scan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    #videoFeed {
+      width: 640px;
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    #captureButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #captureButton:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Face Detection Scan</h1>
+  <video id="videoFeed" autoplay playsinline></video>
+  <br />
+  <button id="captureButton">Capture Face</button>
+  <div id="message"></div>
+<!--  Hidden canvas to capture video frame  -->
+  <canvas id="snapshotCanvas" style="display: none;"></canvas>
+
+  <script>
+    const video = document.getElementById('videoFeed');
+    const canvas = document.getElementById('snapshotCanvas');
+    const captureButton = document.getElementById('captureButton');
+    const messageDiv = document.getElementById('message');
+
+    // Global timer: logout user after 1 minute on the page regardless of activity.
+    const globalTimer = setTimeout(logoutUser, 60000);
+
+    function logoutUser() {
+      alert("You have been on this page for too long. Logging you out.");
+      fetch('/logout', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+          window.location.href = "/";
+        })
+        .catch(err => {
+          console.error("Error logging out:", err);
+          window.location.href = "/";
+        });
+    }
+
+    // Initialize camera access.
+    async function initCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+      } catch (err) {
+        console.error("Error accessing camera:", err);
+        messageDiv.textContent = "Error accessing camera. Please check your device settings.";
+      }
+    }
+
+    // Capture an image from the video feed and compress it to JPEG.
+    function captureImage() {
+      const context = canvas.getContext('2d');
+      const width = video.videoWidth;
+      const height = video.videoHeight;
+      canvas.width = width;
+      canvas.height = height;
+      context.drawImage(video, 0, 0, width, height);
+      return canvas.toDataURL('image/jpeg', 0.7);
+    }
+
+    // Send captured image to the server for face detection.
+    async function sendImageForDetection(imageData) {
+      try {
+        // Use Promise.race to enforce a capture timeout (60 seconds).
+        const detectionPromise = fetch('/detect-face', {
+          method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ image: imageData })
+        }).then(response => response.json());
+
+        const captureTimeout = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error("Capture timeout")), 60000)
+        );
+
+        const data = await Promise.race([detectionPromise, captureTimeout]);
+
+        messageDiv.textContent = data.message;
+        if (data.message.includes("Face detected")) {
+          setTimeout(() => {
+            window.location.href = "/vote";
+          }, 1500);
+        } else if (data.message.includes("Too many failed detections")) {
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 1500);
+        }
+      } catch (err) {
+        console.error("Error sending image:", err);
+        messageDiv.textContent = "Operation took too long. Logging out...";
+        logoutUser();
+      }
+    }
+
+    // When the capture button is clicked, process the image.
+    captureButton.addEventListener("click", () => {
+      captureButton.disabled = true;
+      messageDiv.textContent = "Processing...";
+      const imageData = captureImage();
+      sendImageForDetection(imageData).finally(() => {
+        captureButton.disabled = false;
+      });
+    });
+
+    window.addEventListener("DOMContentLoaded", initCamera);
+  </script>
+</body>
+</html>
+
