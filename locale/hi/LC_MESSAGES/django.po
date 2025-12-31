@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-27 01:03+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: voting/templates/voting/base.html:20
+msgid "Menu"
+msgstr ""
+
+#: voting/templates/voting/base.html:32
+msgid "Toll Free-1950"
+msgstr ""
+
+#: voting/templates/voting/base.html:75
+msgid "Election Commission of India"
+msgstr ""
+
+#: voting/templates/voting/base.html:78
+msgid ""
+"The Election Commission of India is an autonomous constitutional authority "
+"responsible for administering election processes in India. The body "
+"administers elections to the Lok Sabha, Rajya Sabha, State Legislative "
+"Assemblies in India, and the offices of the President and Vice President in "
+"the country."
+msgstr ""
+
+#: voting/templates/voting/base.html:86
+msgid "Quick Links"
+msgstr ""
+
+#: voting/templates/voting/base.html:122
+msgid "© Copyright Election Commission of India 2024"
+msgstr ""
+
+#: voting/templates/voting/home.html:65
+msgid "Virtual Election Portal"
+msgstr ""
+
+#: voting/templates/voting/home.html:68
+msgid "Register to Vote"
+msgstr ""
+
+#: voting/templates/voting/home.html:69
+msgid "Login to Vote"
+msgstr ""
+
+#: voting/templates/voting/login.html:5
+msgid "Voter Login - Election Commission of India"
+msgstr ""
+
+#: voting/templates/voting/login.html:18
+msgid "Voter Login"
+msgstr ""
+
+#: voting/templates/voting/login.html:19
+msgid "Choose your preferred login method to access the voting system"
+msgstr ""
+
+#: voting/templates/voting/login.html:26
+msgid "Select Login Method"
+msgstr ""
+
+#: voting/templates/voting/login.html:30
+msgid "Name & Phone"
+msgstr ""
+
+#: voting/templates/voting/login.html:34
+msgid "Aadhaar & Phone"
+msgstr ""
+
+#: voting/templates/voting/login.html:38
+msgid "Voter ID & Phone"
+msgstr ""
+
+#: voting/templates/voting/login.html:50
+msgid "Personal Details"
+msgstr ""
