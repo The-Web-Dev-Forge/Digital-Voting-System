@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiLocker Sign In</title>
+    <link rel="stylesheet" href="/Digilocker_login/digi_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- login page -->
+    <div class="navbar">
+        <div class="menu-sec">
+            <div class="menuicon">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+            <div class="menu">&nbsp;&nbsp;Menu</div>
+        </div>
+        <div class="links">
+            <div class="home">  
+                <a href="../HomePage.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="line"></div>
+            <div class="tollfree">
+                <div class="ph">
+                    <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+                </div>
+                <div class="toll">
+                    &nbsp;&nbsp;Toll Free-1950
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="social">
+                <div class="f">
+                    <a href="https://www.facebook.com/ECI/"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="insta">
+                    <a href="https://www.instagram.com/ecisveep/"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="x">
+                    <a href="https://twitter.com/SpokespersonECI"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="utube">
+                    <a href="https://www.youtube.com/eci"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="lang">
+                <span>हिंदी में देखें</span>
+            </div>
+        </div>
+    </div>
+    <div class="navbar2">
+        <div class="eci">
+            <img src="images/eci.jpg" height="55px" >
+
+        </div>
+        <div class="search">
+            <a href="../Search_button/index.html"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+        </div>
+    </div>
+
+    <!-- page1 -->
+    <div class="page1">
+        <div class="digi-span">
+        <div class="container1">
+            <header>
+                <img src="./images/embler.png" alt="Emblem" class="emblem">
+                <div class="title">
+                    <h1 style="color: blue;">DigiLocker</h1>
+                    <p>Document Wallet to Empower Citizens</p>
+                </div>
+            </header>
+            <main>
+                <div class="signin-box">
+                    <h2>Sign In to your account!</h2>
+                    <div class="tabs">
+                        <button class="tab active" id="tab-mobile" onclick="showForm('mobile')">Mobile</button>
+                        <button class="tab" id="tab-username" onclick="showForm('username')">Username</button>
+                        <button class="tab" id="tab-aadhaar" onclick="showForm('aadhaar')">Aadhaar</button>
+                    </div>
+                    <form id="signin-form" onsubmit="handleSubmit(event)">
+                        <input type="hidden" name="loginType" value="digilocker">
+                        <div id="mobile" class="signin-form">
+                            <input type="text" name="mobile" placeholder="Mobile*">
+                            <input type="password" name="mobile-pin" placeholder="6 digit security PIN*">
+                        </div>
+                        <div id="username" class="signin-form" style="display: none;">
+                            <input type="text" name="username" placeholder="Username*">
+                            <input type="password" name="username-pin" placeholder="6 digit security PIN*">
+                        </div>
+                        <div id="aadhaar" class="signin-form" style="display: none;">
+                            <input type="text" name="aadhaar" placeholder="Aadhaar Number*">
+                            <input type="password" name="aadhaar-pin" placeholder="6 digit security PIN*">
+                        </div>
+                        <a href="#" class="forgot-pin">Forgot security PIN?</a>
+                        <button type="submit" class="signin-button">Sign In</button>
+                    </form>
+                    <p class="signup">Do not have an account? <a href="/Digilocker-login/Sign-up">Sign Up</a></p>
+                </div>
+            </main>
+        </div>
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:29;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:36;"></span>
+        <span style="--i:37;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:39;"></span>
+        <span style="--i:40;"></span>
+        <span style="--i:41;"></span>
+        <span style="--i:42;"></span>
+        <span style="--i:43;"></span>
+        <span style="--i:44;"></span>
+        <span style="--i:45;"></span>
+        <span style="--i:46;"></span>
+        <span style="--i:47;"></span>
+        <span style="--i:48;"></span>
+        <span style="--i:49;"></span>
+    </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container2">
+            <div class="footer-section1 footer-section">
+                <h3>Election Commission of India</h3>
+                <div class="eci-txt">
+                    <p><img src="images/eci-logo-white.svg" alt="Election Commission of India Logo" class="footer-logo" height="80px" width="80px"></p>
+                    <p>The Election Commission of India is an autonomous constitutional authority responsible for administering election processes in India. The body administers elections to the Lok Sabha, Rajya Sabha, State Legislative Assemblies in India, and the offices of the President and Vice President in the country.</p>
+                </div>
+                
+                <p>📍 Nirvachan Sadan, Ashoka Road, New Delhi 110001</p>
+            </div>
+            <div class="footer-section">
+                <img src="images/ge24.png" alt="General Election 2024" class="election-image">
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="cont2">
+                <div class="list1">
+                    <ul class="quick-links">
+                        <li><a href="https://www.eci.gov.in/about-eci">About ECI</a></li>
+                        <li><a href="https://www.eci.gov.in/officers-directory">Officers Directory</a></li>
+                        <li><a href="https://www.eci.gov.in/contact-us">Contact Us</a></li>
+                        <li><a href="https://voters.eci.gov.in/home/ngsp">Public Grievance</a></li>
+                        <li><a href="https://voters.eci.gov.in/home/ngsp">RTI Online</a></li>
+                        <li><a href="https://voters.eci.gov.in/home/ngsp">eOffice</a></li>
+                        <li><a href="https://voters.eci.gov.in/">Apply for Voter Card</a></li>
+                        <li><a href="https://www.eci.gov.in/voter-education">SVEEP</a></li>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul class="quick-links">
+                    <li><a href="https://www.eci.gov.in/service-voter-registration-portal">Service Voter Portal</a></li>
+                    <li><a href="https://www.eci.gov.in/service-voter-registration-portal">Download cVIGIL</a></li>
+                    <li><a href="https://www.eci.gov.in/affidavit-portal">Candidate Affidavits</a></li>
+                    <li><a href="https://www.eci.gov.in/international-corporation">International Cooperation</a></li>
+                    <li><a href="https://indiaawebcentre.org/">India A-WEB Centre</a></li>
+                    <li><a href="https://voicenet.in/">VoiceNet</a></li>
+                    <li><a href="https://www.eci.gov.in/mcc">MCC Cases</a></li>
+                    <li><a href="https://www.eci.gov.in/political-party-registration">Political Parties Registration</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ECI/"><i class="fa-brands fa-facebook-f" style="color:#ace8fe;"></i></a>
+            <a href="https://www.instagram.com/ecisveep/"><i class="fa-brands fa-instagram" style="color:#ace8fe;"></i></a>
+            <a href="https://twitter.com/SpokespersonECI"><i class="fa-brands fa-x-twitter" style="color: #ace8fe;"></i></a>
+            <a href="https://www.youtube.com/eci"><i class="fa-brands fa-youtube" style="color: #ace8fe;"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright Election Commission of India 2024</p>
+        </div>
+    </footer>
+
+
+
+    <script src="/Digilocker_login/Digi_script.js"></script>
+</body>
+</html>
