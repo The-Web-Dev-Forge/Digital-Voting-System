@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NRI Voting Registration</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar
+{
+    background-color:#004274;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.menu-sec
+{
+    width: 20%;
+    padding-left: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+    font-weight:500;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.links
+{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.tollfree
+{
+    display: flex;
+    justify-content: space-around;
+}
+.social
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.social div{
+    padding: 10px;
+}
+.lang
+{
+    background-color: #c2048a;
+    border-radius: 5px;
+    padding: 8px;
+}
+.lang:hover
+{
+    border: 2px solid white;
+}
+.line
+{
+    height: 35px;
+    border-right: 1px solid white;
+}
+.navbar2
+{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 45px;
+    border-bottom: 2px solid #c2048a;
+    background-color:white;
+}
+.search
+{
+    padding: 8px;
+    background-color: #c2048a;
+    border-radius: 5px;
+}
+.search:hover
+{
+    border: 2px solid white;
+}
+i{
+    font-size: 20px;
+}
+i:hover
+{
+    transform: scale(1.2);
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ace8fe;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .guidelines-container {
+            background-color: #d5e5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .tick-marks-container {
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #1a5276;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        input[type="file"],
+        input[type="email"],
+        input[type="tel"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .phone-group {
+            display: flex;
+            align-items: center;
+        }
+        .phone-code {
+            width: 25%;
+            max-width: 80px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            color: #333;
+            font-size: 14px;
+            outline: none;
+        }
+        .phone-number {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-left: none;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .submit-online {
+            background-color: #27ae60;
+        }
+        .submit-via-post {
+            background-color: #e67e22;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+    
+    background-color:#004274;
+    color:#ace8fe;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.container-footer {
+    display: flex;
+    padding: 40px; 
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+}
+.footer-section1
+{
+    background-color: rgba(0, 0, 38,0.2);
+    padding: 16px 8px ;
+    border-radius: 10px;
+}
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer h3 {
+    color: white;
+    border-bottom: 2px solid #2da4f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.eci-txt
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer p, .footer ul {
+    margin: 0 0 10px 0; 
+}
+.footer ul li {
+    margin: 5px 0;
+}
+.footer ul li a {
+    color:#ace8fe;
+    text-decoration: none;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.cont2
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.footer-logo {
+    margin: 10px 0;
+    padding-right: 30px;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 15px 40px;
+    border-top: 1px solid #2da4f0;
+}
+.election-image {
+    max-width: 100%;
+    height: auto;
+    padding-left: 40px;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 38,0.2);
+}
+
+    </style>
+    <script>
+        function toggleForm() {
+            var citizenChecked = document.getElementById('citizen').checked;
+            var noOtherCitizenshipChecked = document.getElementById('noOtherCitizenship').checked;
+            var validPassportChecked = document.getElementById('validPassport').checked;
+            var tempAbsenceChecked = document.getElementById('tempAbsence').checked;
+
+            // Check if all checkboxes are checked
+            if (citizenChecked && noOtherCitizenshipChecked && validPassportChecked && tempAbsenceChecked) {
+                document.getElementById('formSection').style.display = 'block';
+                document.getElementById('submitForm6A').style.display = 'block';
+                document.getElementById('submitOptions').style.display = 'block';
+            } else {
+                document.getElementById('formSection').style.display = 'none';
+                document.getElementById('submitForm6A').style.display = 'none';
+                document.getElementById('submitOptions').style.display = 'none';
+            }
+        }
+
+        function toggleAllCheckboxes() {
+            var allChecked = document.getElementById('selectAll').checked;
+            document.getElementById('citizen').checked = allChecked;
+            document.getElementById('noOtherCitizenship').checked = allChecked;
+            document.getElementById('validPassport').checked = allChecked;
+            document.getElementById('tempAbsence').checked = allChecked;
+
+            // Trigger form visibility check
+            toggleForm();
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-sec">
+            <div class="menuicon">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+            <div class="menu">&nbsp;&nbsp;Menu</div>
+        </div>
+        <div class="links">
+            <div class="home">  
+                <a href="../nationality.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="line"></div>
+            <div class="tollfree">
+                <div class="ph">
+                    <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+                </div>
+                <div class="toll">
+                    &nbsp;&nbsp;Toll Free-1950
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="social">
+                <div class="f">
+                    <a href="https://www.facebook.com/ECI/"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="insta">
+                    <a href="https://www.instagram.com/ecisveep/"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="x">
+                    <a href="https://twitter.com/SpokespersonECI"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="utube">
+                    <a href="https://www.youtube.com/eci"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="lang">
+                <span>हिंदी में देखें</span>
+            </div>
+        </div>
+    </div>
+    <div class="navbar2">
+        <div class="eci">
+            <img src="../images/eci.jpg" height="55px" >
+
+        </div>
+        <div class="search">
+            <a href="../Search_button/index.html"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>NRI Voting Registration</h1>
+
+        <div class="guidelines-container">
+            <h2>Guidelines for Filling Up Form-6A</h2>
+            <ol>
+                <li>Every Indian citizen staying abroad, who hasn't acquired foreign citizenship and is 18 years or older as of January 1st of the year, can apply using Form 6A.</li>
+                <li>The application must be submitted to the Electoral Registration Officer (ERO) of the constituency where the applicant's residence in India is located as per the passport.</li>
+                <li>Submit the application directly to the ERO in person or by post. Find ERO details on the Election Commission website.</li>
+                <li>Attach a recent passport-size photograph with a light background (preferably white).</li>
+                <li>If sent by post, attach attested copies of passport pages and visa details. If submitted in person, bring originals for verification.</li>
+                <li>Voting requires physical presence at the polling station with the original passport.</li>
+            </ol>
+        </div>
+
+        <div class="tick-marks-container">
+            <form id="nriForm">
+                <div class="form-group">
+                    <input type="checkbox" id="citizen" onchange="toggleForm()" required>
+                    <label for="citizen">I am a citizen of India, aged 18 or above as of January 1st of the election year.</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="noOtherCitizenship" onchange="toggleForm()" required>
+                    <label for="noOtherCitizenship">I do not hold citizenship of any other country.</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="validPassport" onchange="toggleForm()" required>
+                    <label for="validPassport">I possess a valid Indian passport.</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="tempAbsence" onchange="toggleForm()" required>
+                    <label for="tempAbsence">I am temporarily absent from India for reasons such as employment or education.</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="selectAll" onchange="toggleAllCheckboxes()">
+                    <label for="selectAll">Tick this box to select all checkboxes at once.</label>
+                </div>
+
+                <div id="formSection" style="display: none;">
+                    <h2>Form 6A Information</h2>
+                    <div class="form-group">
+                        <label for="fullName">Full Name (as per Indian passport):</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="text" id="gender" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="placeOfBirth">Place of Birth (Village/Town):</label>
+                        <input type="text" id="placeOfBirth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDistrict">District of Birth:</label>
+                        <input type="text" id="birthDistrict" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthState">State of Birth:</label>
+                        <input type="text" id="birthState" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID:</label>
+                        <input type="email" id="email">
+                        <small>(Optional) Provide your email address.</small>
+                    </div>
+                    <div class="form-group phone-group">
+                        <input type="text" id="phoneCode" class="phone-code" placeholder="+91">
+                        <input type="tel" id="phoneNumber" class="phone-number" required>
+                        <small> </small>
+                    </div>
+                    <div class="form-group">
+                        <h3>Details of Current Passport</h3>
+                        <label for="passportNumber">Passport Number:</label>
+                        <input type="text" id="passportNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportIssueDate">Date of Issue (dd/mm/yyyy):</label>
+                        <input type="date" id="passportIssueDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportHouseNo">House No.:</label>
+                        <input type="text" id="passportHouseNo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportPlaceOfIssue">Place of Issue:</label>
+                        <input type="text" id="passportPlaceOfIssue" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportPinCode">Pin Code:</label>
+                        <input type="text" id="passportPinCode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportExpiryDate">Date of Expiry (dd/mm/yyyy):</label>
+                        <input type="date" id="passportExpiryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <h3>Details of Visa of the Country of Current Residence</h3>
+                        <label for="visaDateOfIssue">Date of Issue (dd/mm/yyyy):</label>
+                        <input type="date" id="visaDateOfIssue" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visaType">Type of Visa:</label>
+                        <input type="text" id="visaType" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visaNumber">Visa Number:</label>
+                        <input type="text" id="visaNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visaExpiryDate">Date of Expiry (dd/mm/yyyy):</label>
+                        <input type="date" id="visaExpiryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visaIssuingAuthority">Name of Issuing Authority:</label>
+                        <input type="text" id="visaIssuingAuthority" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportPhoto">Upload Passport Photo:</label>
+                        <input type="file" id="passportPhoto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passportCopy">Upload Passport Copy:</label>
+                        <input type="file" id="passportCopy" required>
+                    </div>
+                </div>
+
+                <div id="submitForm6A" style="display: none;">
+                    <button id="finalSubmit" type="submit">Submit Form 6A</button>
+                </div>
+
+                <div id="submitOptions" style="display: none;">
+                    <div class="form-group">
+                        <button type="button" class="submit-online" onclick="window.open('https://voterportal.eci.gov.in/login', '_blank')">Submit Form 6A Online</button>
+                        <br>
+                        <small>Fill Form 6A online at <a href="https://voterportal.eci.gov.in/login" target="_blank">https://voterportal.eci.gov.in/login</a> and upload the requisite proofs.</small>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="submit-via-post" onclick="window.open('https://voterportal.eci.gov.in', '_blank')">Download Form 6A for Submission via Post</button>
+                        <br>
+                        <small>Alternatively, download Form 6A from ECI website <a href="https://voterportal.eci.gov.in" target="_blank">https://voterportal.eci.gov.in</a> if submitted via post.</small>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+  <footer class="footer">
+    <div class="container-footer">
+        <div class="footer-section1 footer-section">
+            <h3>Election Commission of India</h3>
+            <div class="eci-txt">
+                <p><img src="../images/eci-logo-white.svg" alt="Election Commission of India Logo" class="footer-logo" height="80px" width="80px"></p>
+                <p>The Election Commission of India is an autonomous constitutional authority responsible for administering election processes in India. The body administers elections to the Lok Sabha, Rajya Sabha, State Legislative Assemblies in India, and the offices of the President and Vice President in the country.</p>
+            </div>
+            
+            <p>📍 Nirvachan Sadan, Ashoka Road, New Delhi 110001</p>
+        </div>
+        <div class="footer-section">
+            <img src="../images/ge24.png" alt="General Election 2024" class="election-image">
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="cont2">
+            <div class="list1">
+                <ul class="quick-links">
+                    <li><a href="https://www.eci.gov.in/about-eci">About ECI</a></li>
+                    <li><a href="https://www.eci.gov.in/officers-directory">Officers Directory</a></li>
+                    <li><a href="https://www.eci.gov.in/contact-us">Contact Us</a></li>
+                    <li><a href="https://voters.eci.gov.in/home/ngsp">Public Grievance</a></li>
+                    <li><a href="https://voters.eci.gov.in/home/ngsp">RTI Online</a></li>
+                    <li><a href="https://voters.eci.gov.in/home/ngsp">eOffice</a></li>
+                    <li><a href="https://voters.eci.gov.in/">Apply for Voter Card</a></li>
+                    <li><a href="https://www.eci.gov.in/voter-education">SVEEP</a></li>
+                </ul>
+            </div>
+            <div class="list2">
+                <ul class="quick-links">
+                    <li><a href="https://www.eci.gov.in/service-voter-registration-portal">Service Voter Portal</a></li>
+                    <li><a href="https://www.eci.gov.in/service-voter-registration-portal">Download cVIGIL</a></li>
+                    <li><a href="https://www.eci.gov.in/affidavit-portal">Candidate Affidavits</a></li>
+                    <li><a href="https://www.eci.gov.in/international-corporation">International Cooperation</a></li>
+                    <li><a href="https://indiaawebcentre.org/">India A-WEB Centre</a></li>
+                    <li><a href="https://voicenet.in/">VoiceNet</a></li>
+                    <li><a href="https://www.eci.gov.in/mcc">MCC Cases</a></li>
+                    <li><a href="https://www.eci.gov.in/political-party-registration">Political Parties Registration</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/ECI/"><i class="fa-brands fa-facebook-f" style="color:#ace8fe;"></i></a>
+        <a href="https://www.instagram.com/ecisveep/"><i class="fa-brands fa-instagram" style="color:#ace8fe;"></i></a>
+        <a href="https://twitter.com/SpokespersonECI"><i class="fa-brands fa-x-twitter" style="color: #ace8fe;"></i></a>
+        <a href="https://www.youtube.com/eci"><i class="fa-brands fa-youtube" style="color: #ace8fe;"></i></a>
+    </div>
+    <div class="footer-bottom">
+        <p>© Copyright Election Commission of India 2024</p>
+    </div>
+</footer>
+</body>
+</html>
